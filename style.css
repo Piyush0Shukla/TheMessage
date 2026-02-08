@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #0e0e0e;
+  color: #f2f2f2;
+  height: 100vh;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  display: none;
+  max-width: 720px;
+  padding: 40px;
+  text-align: center;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.screen.active {
+  display: block;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+button {
+  background: none;
+  border: 1px solid #f2f2f2;
+  color: #f2f2f2;
+  padding: 12px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: #f2f2f2;
+  color: #0e0e0e;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
